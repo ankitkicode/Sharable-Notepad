@@ -54,6 +54,11 @@ app.get('/note/:customId', async (req, res) => {
     if (!note) return res.status(404).json({ error: 'Note not found' });
     res.json({ text: note.text });
 });
+app.get('/', (req, res) => {
+    res.send('Welcome to the Note Share API');
+}); 
 
-const PORT = 5000;
+
+
+const PORT = 5050;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
