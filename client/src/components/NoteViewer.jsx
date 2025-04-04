@@ -8,7 +8,7 @@ const NoteViewer = () => {
 
   useEffect(() => {
     const fetchNote = async () => {
-      const response = await fetch(`http://localhost:5000/note/${customId}`);
+      const response = await fetch(`https://sharable-notepad.onrender.com/note/${customId}`);
       if (response.ok) {
         const data = await response.json();
         setNoteText(data.text);

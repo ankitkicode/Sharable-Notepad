@@ -6,7 +6,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const fetchNotes = () => {
-    fetch('http://localhost:5000/notes')
+    fetch('https://sharable-notepad.onrender.com/notes')
       .then((res) => res.json())
       .then((data) => setNotes(data.notes))
       .catch((err) => console.error('Failed to load notes:', err));
